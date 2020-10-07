@@ -3,7 +3,7 @@ view: summary {
     ;;
 
   dimension: active {
-    type: string
+    type: number
     sql: ${TABLE}.active ;;
   }
 
@@ -26,7 +26,7 @@ view: summary {
 
   measure: sum_confirmed {
     type: sum
-    sql: ${confirmed} ;;
+    sql: ${TABLE}.confirmed  ;;
   }
 
   dimension: deaths {
@@ -92,12 +92,6 @@ view: summary {
 
 
 
-  dimension: location_geom {
-    type: string
-    sql: ${TABLE}.location_geom ;;
-  }
-
-
 
   dimension: province_state {
     type: string
@@ -105,7 +99,7 @@ view: summary {
   }
 
   measure: recovered {
-    type: number
+    type: sum
     sql: ${TABLE}.recovered ;;
   }
 
