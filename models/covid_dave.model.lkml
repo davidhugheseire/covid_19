@@ -1,4 +1,4 @@
-connection: "big_query_dave"
+connection: "big_query"
 
 include: "/Views/*.view.lkml"
 
